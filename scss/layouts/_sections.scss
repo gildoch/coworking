@@ -1,0 +1,74 @@
+.hero {
+  padding: 1em;
+  h1 {
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+  }
+}
+
+.item {
+  position: relative;
+  margin-bottom: 1em;
+  img {
+    width: 100%;
+  }
+  .caption {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5em 1em;
+    p {
+      font-size: $fs-body;
+      line-height: $base-line-height;
+      font-weight: $fw-semibold;
+    }
+    button {
+      background-color: $btn-main-bg;
+      padding: $btn-padding-y $btn-padding-x;
+      border: none;
+      color: $clr-light;
+      font-weight: $fw-semibold;
+    }
+  }
+  .badge {
+    background-color: $clr-accent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.75em;
+    color: darken($color: $clr-light, $amount: 5);
+  }
+}
+
+@media (min-width: 600px) {
+  .hero {
+    text-align: center;
+    padding: 4em;
+    h1 {
+      font-size: $fs-h1;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .item {
+      width: 80%;
+      max-width: 800px;
+      margin-bottom: 2em;
+      .caption {
+        padding: 1em;
+        p {
+          font-size: $fs-h3;
+        }
+        button {
+          font-size: 1.5rem;
+        }
+      }
+      .badge {
+        padding: 1em;
+      }
+    }
+  }
+}

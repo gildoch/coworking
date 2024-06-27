@@ -1,0 +1,37 @@
+header {
+  background-color: darken($color: $clr-dark, $amount: 3);
+  color: $clr-light;
+  padding: 1em;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        list-style: none;
+        img {
+          width: 30px;
+          height: 20px;
+          margin: 0 0.5em;
+        }
+      }
+    }
+    button {
+      background-color: $clr-dark;
+      border: none;
+      color: darken($color: $clr-light, $amount: 30);
+      font-size: $fs-h3;
+      margin-right: 0.75em;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  header {
+    padding: 2em 3em;
+    .logo {
+      font-size: $fs-h3;
+    }
+  }
+}
